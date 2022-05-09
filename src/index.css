@@ -10,3 +10,22 @@ nav {
 .card{
     background-color: #000000;
 }
+
+.list-group{
+    background-color: #711A75;
+}
+
+list-group-item{
+    background-color: #000000;
+    color: #F582A7;
+}
+
+.boton:hover{
+    background-color: #711A75;
+    color: #FFFFFF;
+}
+
+.boton{
+    background-color: #F582A7;
+    color: #000000;
+}
