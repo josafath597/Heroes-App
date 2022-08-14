@@ -2,6 +2,10 @@ import { useMemo } from "react";
 import { useParams, Navigate, useNavigate } from "react-router-dom"
 import { getHeroById } from "../../selectors/GetHeroById";
 
+// import batman from "../../assets/heroes/dc-batman.jpg"; //estático
+
+const heroImages = require.context("../../assets/heroes", true);
+
 export const HeroScreen = () => {
 
   const { heroId } = useParams();
@@ -24,7 +28,9 @@ export const HeroScreen = () => {
 
   const { id, superhero, publisher, alter_ego, first_appearance, characters } = hero;
 
-  const imagePath = `/assets/heroes/${hero.id}.jpg`;
+  // const imagePath = `/assets/heroes/${hero.id}.jpg`; desde public/assets/heroes/
+  // const imagePath =  batman  //import
+  const imagePath = heroImages(`./${id}.jpg`);
 
 
   return (
